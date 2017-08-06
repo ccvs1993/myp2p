@@ -64,31 +64,31 @@
 		</javaClientGenerator>
 
 		<!-- 配置这次要生成的表对应的domain,mapper等 -->
-		<table tableName="logininfo" delimitIdentifiers="true">
+		<!--<table tableName="logininfo" delimitIdentifiers="true">-->
+			<!--&lt;!&ndash; 参考 javaModelGenerator 的 constructorBased属性 &ndash;&gt;-->
+			<!--<property name="constructorBased" value="false" />-->
+			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+		<!--</table>-->
+		<table tableName="SystemDictionary" delimitIdentifiers="true">
 			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
 			<property name="constructorBased" value="false" />
 			<generatedKey column="id" sqlStatement="JDBC"/>
 		</table>
-		<!--<table tableName="SystemDictionary" delimitIdentifiers="true">-->
-			<!--&lt;!&ndash; 参考 javaModelGenerator 的 constructorBased属性 &ndash;&gt;-->
-			<!--<property name="constructorBased" value="false" />-->
-			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-		<!--</table>-->
-		<!--<table tableName="SystemDictionaryItem" delimitIdentifiers="true">-->
-			<!--&lt;!&ndash; 参考 javaModelGenerator 的 constructorBased属性 &ndash;&gt;-->
-			<!--<property name="constructorBased" value="false" />-->
-			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-		<!--</table>-->
-		<!--<table tableName="Userinfo" delimitIdentifiers="true">-->
-			<!--&lt;!&ndash; 参考 javaModelGenerator 的 constructorBased属性 &ndash;&gt;-->
-			<!--<property name="constructorBased" value="false" />-->
-			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-		<!--</table>-->
-		<!--<table tableName="Account" delimitIdentifiers="true">-->
-			<!--&lt;!&ndash; 参考 javaModelGenerator 的 constructorBased属性 &ndash;&gt;-->
-			<!--<property name="constructorBased" value="false" />-->
-			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-		<!--</table>-->
+		<table tableName="SystemDictionaryItem" delimitIdentifiers="true">
+			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
+			<property name="constructorBased" value="false" />
+			<generatedKey column="id" sqlStatement="JDBC"/>
+		</table>
+		<table tableName="Userinfo" delimitIdentifiers="true">
+			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
+			<property name="constructorBased" value="false" />
+			<generatedKey column="id" sqlStatement="JDBC"/>
+		</table>
+		<table tableName="Account" delimitIdentifiers="true">
+			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
+			<property name="constructorBased" value="false" />
+			<generatedKey column="id" sqlStatement="JDBC"/>
+		</table>
 		
 	</context>
 
