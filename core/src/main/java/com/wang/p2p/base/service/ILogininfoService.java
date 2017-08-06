@@ -9,4 +9,6 @@ public interface ILogininfoService {
     boolean checkUsername(String username);
 
     Logininfo selectById(long id);
+
+    void login(String username, String password);
 }

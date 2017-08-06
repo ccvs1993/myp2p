@@ -19,7 +19,6 @@ public class RegisterController {
         @RequestMapping("register")
         @ResponseBody
         public JSONResult register(String username,String password){
-            System.out.println("register.do "+username+" "+password);
             JSONResult json=new JSONResult();
             try {
                 this.logininfoService.register(username, password);
@@ -34,8 +33,20 @@ public class RegisterController {
         @RequestMapping("checkUsername")
         @ResponseBody
         public Boolean checkUsername(String username){
-            System.out.println("checkUsername");
             return !this.logininfoService.checkUsername(username);
+        }
+
+        @RequestMapping("login")
+        @ResponseBody
+        public JSONResult login(String username,String password){
+            JSONResult json=new JSONResult();
+            try {
+                this.logininfoService.login(username,password);
+            }catch (RuntimeException e){
+                json.setMsg("用户名或密码错误");
+                json.setSuccess(false);
+            }
+            return json;
         }
 
 }

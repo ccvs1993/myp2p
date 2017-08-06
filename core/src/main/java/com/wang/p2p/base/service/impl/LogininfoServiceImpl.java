@@ -4,6 +4,7 @@ import com.wang.p2p.base.domain.Logininfo;
 import com.wang.p2p.base.mapper.LogininfoMapper;
 import com.wang.p2p.base.service.ILogininfoService;
 import com.wang.p2p.base.util.MD5;
+import com.wang.p2p.base.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +38,15 @@ public class LogininfoServiceImpl implements ILogininfoService{
     @Override
     public Logininfo selectById(long id) {
         return this.logininfoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void login(String username, String password) {
+        Logininfo current=this.logininfoMapper.login(username,MD5.encode(password));
+        if(current!=null){
+            UserContext.putCurrent(current);
+        }else{
+            throw new RuntimeException();
+        }
     }
 }

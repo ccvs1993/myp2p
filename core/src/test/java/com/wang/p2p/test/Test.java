@@ -18,4 +18,9 @@ public class Test {
         Logininfo logininfo = logininfoService.selectById(1l);
         System.out.println(logininfo.getUsername());
     }
+
+//    @org.junit.Test
+//    public void testlogin() {
+//        logininfoService.login("wangfei","123456");
+//    }
 }
